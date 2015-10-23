@@ -5,10 +5,10 @@ gradle/
 *.DS_Store
 *.classpath
 *.project
+*.iml
 .settings/
 /bin
-.idea
-.idea/*
+.idea/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
