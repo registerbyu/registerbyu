@@ -90,7 +90,7 @@ public class PublicWebController
 
     //TODO:: change this method to return semesters that
     // are published in the database, SemesterDownloader.getSemesterCodes()
-    // needs to be changed to webServie.getSemesterCodes() (needs to be implemented)
+    // needs to be changed to webService.getSemesterCodes() (needs to be implemented)
     // the webService.getSemesterCodes() needs to talk to the DatabaseRegistrationStore/SemesterDAO
     // and get all of the semesterCodes that are in the database
     //
@@ -104,10 +104,9 @@ public class PublicWebController
         if (cachedSemesters == null)
         {
         	cachedSemesters = new ArrayList<String>();
-        	cachedSemesters.add("20151");
-        	cachedSemesters.add("20153");
-        	cachedSemesters.add("20154");
         	cachedSemesters.add("20155");
+            cachedSemesters.add("20161");
+
             //cachedSemesters = SemesterDownloader.getSemesterCodes();
         }
         return cachedSemesters;

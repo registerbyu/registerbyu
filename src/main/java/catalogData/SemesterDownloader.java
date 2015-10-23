@@ -51,10 +51,9 @@ public class SemesterDownloader{
 			in.close();
 
 		}
-		catch (Exception e){
+		catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		return response.toString();
 	}
 
@@ -67,7 +66,7 @@ public class SemesterDownloader{
 		for (String s : quoted_codes){
 			semesterCodes.add(s.replace("\"", ""));	// [20135, 20141, 20143]
 		}
-
+		System.out.println("semester codes found: " + semesterCodes.toString());
 		return semesterCodes;
 	}
 

@@ -73,7 +73,7 @@ public class httpCourseDownloader {
         String creditType = "A"; //Figure out what this means, also "S"
         
         for(String dept : DepartmentDownloader.getHTMLdeptCodes(semesterCode)){
-           System.out.println(dept);
+           //System.out.println(dept);
            
            String targetURL = "http://saasta.byu.edu/noauth/classSchedule/ajax/searchXML.php";
            String urlParams = "SEMESTER=" + semesterCode + "&CREDIT_TYPE=" + creditType + "&DEPT="+ dept +"&INST=&DESCRIPTION=&DAYFILTER=&BEGINTIME=&ENDTIME=&SECTION_TYPE=&CREDITS=&CREDITCOMP=&CATFILTER=&BLDG=";
