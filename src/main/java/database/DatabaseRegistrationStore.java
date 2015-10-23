@@ -34,14 +34,17 @@ public class DatabaseRegistrationStore implements RegistrationStore {
 
 		String dbUser = "admin";
 		String dbPassword = "ad428min";
+        String dbUrl = System.getenv("MONGODB_URL");
+        if (null == dbUrl) {
+            dbUrl = "localhost";
+        }
 
 		// Connect to our database
-		MongoClientURI uri = new MongoClientURI("mongodb://" + dbUser + ":" + dbPassword +
-				"@mongo.registerbyu.com/classreg");
+		MongoClientURI uri = new MongoClientURI("mongodb://" + dbUser + ":" + dbPassword + "@" + dbUrl);
 		MongoClient client;
 		try {
 			client = new MongoClient(uri);
-			DB db = client.getDB(uri.getDatabase());
+			DB db = client.getDB("classreg");
 			return db;
 		} catch (UnknownHostException e) {
 
@@ -144,7 +147,7 @@ public class DatabaseRegistrationStore implements RegistrationStore {
         int userId = 0;
         return userId;
     }
-    
+
     public Student getStudent(String id){
     	Student s = new Student();
     	try{

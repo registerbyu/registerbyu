@@ -1,0 +1,56 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "volumes": [
+     {
+        "name": "mongodb-backup",
+        "host": {
+            "sourcePath": "/ecs/mongo-data"
+        }
+     }],
+    "containerDefinitions": [
+     {
+        "name": "mongodb",
+        "image": "tutum/mongodb",
+        "environment": [
+         {
+            "name": "MONGODB_PASS",
+            "value": "ad428min"
+         }],
+        "essential":"true",
+        "memory": 128,
+        "mountPoints": [
+         {
+            "sourceVolume": "mongodb-backup",
+            "containerPath": "/data/db",
+            "readOnly": false
+         }
+        ],
+        "portMappings": [
+         {
+            "hostPort": 27017,
+            "containerPort": 27017
+         }
+        ]
+     },
+     {
+        "name": "registerbyu",
+        "image": "nhumrich/registerbyu", 
+        "environment": [
+         {
+            "name": "MONGODB_URL",
+            "value": "mongodb"
+         }],
+        "memory": 512,
+        "essential": true,
+        "links": [
+            "mongodb"
+        ],
+        "portMappings": [
+         {
+            "hostPort": 80,
+            "containerPort": 8080
+         }
+        ]
+     }
+    ]
+}

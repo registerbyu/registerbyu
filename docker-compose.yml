@@ -1,0 +1,14 @@
+mongodb:
+  environment:
+    MONGODB_PASS: ad428min
+  image: tutum/mongodb
+  ports:
+  - 27017:27017
+registerbyu:
+  environment:
+    MONGODB_URL: mongodb
+  image: nhumrich/registerbyu
+  links:
+  - mongodb:mongodb
+  ports:
+  - 80:8080
