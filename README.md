@@ -4,12 +4,9 @@ cs428crs
 #############################
 ## Getting Started
 #############################
-cd to the directory where you want to store the root of your project
 
-    git clone https://github.com/byuCs428CRS/cs428crs.git
-
-Now you can open this project in any IDE you want.
-I used IntelliJ. With intelliJ you can simply do File > Open.. then select the build.gradle file
+Tou can open this project in any IDE you want.
+Typical is IntelliJ. With intelliJ you can simply do File > Open.. then select the build.gradle file
 it should pull in the whole project.
 If your using eclipse you can go: File>Import>Gradle (If this is not an option,
 install the gradle integration from marketplace via help). Follow the instructions after this.
@@ -46,6 +43,12 @@ You should see some text say "Spring" like this:
 
 If you have that then you are good to go!!!
 You can now connect to your local server at localhost:8080
+
+############
+## Docker
+############
+
+If you understand docker... you can build a docker image using `./gradlew docker -x test` and you can run the code against a local database using `docker-compose up`
 
 ###########
 ## Spring
