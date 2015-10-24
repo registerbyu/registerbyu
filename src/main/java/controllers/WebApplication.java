@@ -24,7 +24,7 @@ import java.util.*;
 @EnableAutoConfiguration
 public class WebApplication
 {
-    private static String service = "https://registerbyu.com/";
+    private static String service = "http://registerbyu.com/";
 
 	public static void main(String[] args)
     {

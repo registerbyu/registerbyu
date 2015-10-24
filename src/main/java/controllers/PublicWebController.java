@@ -151,11 +151,12 @@ public class PublicWebController
      * @param schedule
      * @param session
      */
-    @RequestMapping(value = "/saveSchedule", method = POST,
+    @RequestMapping(value = "/saveSchedule/{sem_id}", method = POST,
             consumes = "application/json")
     @ResponseStatus(value = HttpStatus.OK)
     public void saveSchedule(
-            @RequestBody Schedule schedule, HttpSession session)
+            @RequestBody Schedule schedule,
+            @PathVariable String sem_id, HttpSession session)
     {
         String uid = getUserId(session);
         webService.saveSchedule(uid, schedule);

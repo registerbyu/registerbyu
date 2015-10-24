@@ -52,7 +52,7 @@ dependencies {
 
 task docker(type: Docker, dependsOn: build) {
     push = false
-    applicationName = 'nhumrich/classreg'
+    applicationName = 'nhumrich/registerbyu'
     tagVersion = 'latest'
     dockerfile = file('Dockerfile')
     doFirst {
