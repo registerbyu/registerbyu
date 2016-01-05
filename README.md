@@ -5,7 +5,7 @@ Register BYU
 ## Getting Started
 #############################
 
-Tou can open this project in any IDE you want.
+You can open this project in any IDE you want.
 Typical is IntelliJ. With intelliJ you can simply do File > Open.. then select the build.gradle file
 it should pull in the whole project.
 If your using eclipse you can go: File>Import>Gradle (If this is not an option,
