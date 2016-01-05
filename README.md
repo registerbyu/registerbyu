@@ -25,24 +25,27 @@ This will create a war file.
 ## Running Locally
 ########################
 
-To run directly, you will need to edit the gradle.build file. Comment out line 21, and uncomment line 20. Then, run the following:
+The best way to run locally is in your IDE. Most ide's are smart enough to figure it out. In IntelliJ all you have to do is run the `src/main/java/controllers/WebApplication.java` file. You can also just select the gradle "run" target. Of course you will also need to have an instance of mongodb running
+
+To run directly (from a terminal or w/e), run the following:
 
     ./gradlew run
     
 You should see some text say "Spring" like this:
     
-    BUILD SUCCESSFUL
-    Total time: 22.429 secs
-    . ____ _ __ _ _
-    /\\ / ___'_ __ _ _(_)_ __ __ _ \ \ \ \
+    Starting app with System Args: []
+      .   ____          _            __ _ _
+     /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
     ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-    \\/ ___)| |_)| | | | | || (_| | ) ) ) )
-    ' |____| .__|_| |_|_| |_\__, | / / / /
-    =========|_|==============|___/=/_/_/_/
-    :: Spring Boot :: (v0.5.0.M6)
+     \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+      '  |____| .__|_| |_|_| |_\__, | / / / /
+     =========|_|==============|___/=/_/_/_/
+     :: Spring Boot ::        (v1.2.2.RELEASE)
 
 If you have that then you are good to go!!!
 You can now connect to your local server at localhost:8080
+
+Of course the easiest way to run locally is just run `docker-compose up` but that assumes you have docker-compose installed. It also only works with the pre-built image. It does not run your local version of the code unless you add an overrides file.
 
 ############
 ## Docker
