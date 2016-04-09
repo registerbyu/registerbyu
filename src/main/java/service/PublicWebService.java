@@ -2,10 +2,14 @@ package service;
 
 import database.*;
 import models.Schedule;
+import models.Semester;
 import models.Student;
 import packages.Courses;
 import packages.Departments;
 import packages.Schedules;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author: Nick Humrich
@@ -52,6 +56,10 @@ public class PublicWebService
 	{
         Student student = studentDAO.getStudent(uid);
         studentDAO.saveSchedule(schedule, student);
+	}
+
+	public ArrayList<Semester> getSemesterCodes() {
+		return semesterDAO.getSetOfSemester();
 	}
 
 

@@ -3,6 +3,7 @@ package controllers;
 import catalogData.SemesterDownloader;
 import exceptions.NotAuthorizedException;
 import models.Schedule;
+import models.Semester;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;
@@ -101,13 +102,17 @@ public class PublicWebController
     @ResponseBody
     List<String> getSemesters()
     {
+//        return webService.getSemesterCodes();
         if (cachedSemesters == null)
         {
         	cachedSemesters = new ArrayList<String>();
-        	cachedSemesters.add("20155");
-            cachedSemesters.add("20161");
+//        	cachedSemesters.add("20155");
+//            cachedSemesters.add("20161");
+            cachedSemesters.add("20163");
+            cachedSemesters.add("20164");
+            cachedSemesters.add("20165");
 
-            //cachedSemesters = SemesterDownloader.getSemesterCodes();
+//            cachedSemesters = SemesterDownloader.getSemesterCodes();
         }
         return cachedSemesters;
     }

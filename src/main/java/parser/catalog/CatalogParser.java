@@ -22,7 +22,7 @@ public class CatalogParser {
 	public static void main(String[] args)
 	{
 		try {
-			System.out.println(parseCourses(httpCourseDownloader.downloadCourses("20155")).toString());
+			System.out.println(parseCourses(httpCourseDownloader.downloadCourses("20161")).toString());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
